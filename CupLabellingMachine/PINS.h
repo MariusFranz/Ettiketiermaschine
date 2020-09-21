@@ -22,15 +22,15 @@ const unsigned int EN = 11;
 
 //Pins allgemein 
 const int ledRedPin = 9;
-const int ledGreenPin = 24;
+const int ledGreenPin = 24; //PIN for Relais Motor
 
 const int ButtonGrenn = 22;
-
+const int InfrarotsensorPin = 44;
 
 
 //Variables
 long newPosition = 0;
 long old_Position = 0;
-long Label1Counts = -2000;
+long Label1Counts = -1950;
 
 #endif

@@ -24,6 +24,7 @@ void setup() {
 	pinMode(ledGreenPin, OUTPUT);
 	pinMode(ledRedPin, OUTPUT);
   pinMode(ButtonGrenn, INPUT);
+  pinMode(InfrarotsensorPin, INPUT);
 }
 
 // the loop function runs over and over again until power down or reset
@@ -50,21 +51,23 @@ void loop() {
 		//digitalWrite(ledGreenPin, LOW);
 		//digitalWrite(ledRedPin, LOW);
 		delay(500);
-
+    digitalWrite(ledGreenPin, LOW);//Motor an
+    
 		old_Position = Drehgeber_Class.readAndReset();
 		Serial.print("Drehgeber start value: ");
 		Serial.print(old_Position);
 		//start MOtor
 		newPosition = 0;
-		while (newPosition >= Label1Counts)
+		while (digitalRead(InfrarotsensorPin)== HIGH)
 		{
-			newPosition = Drehgeber_Class.read();
-			Serial.print("  drehgeber value: ");
-			Serial.print(newPosition);
-			digitalWrite(ledGreenPin, LOW);
+			//newPosition = Drehgeber_Class.read();
+			//Serial.print("  drehgeber value: ");
+			//Serial.print(newPosition);
+			//digitalWrite(ledGreenPin, LOW);
 			//Labelmotor.forward();
 			//motor rennen lasssen
 		}
+    delay(370); //Nachlauf Pause zum einstellen
 		digitalWrite(ledGreenPin, HIGH);
 		//Labelmotor.stop();
 		//Stop motor
