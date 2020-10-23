@@ -8,29 +8,29 @@
 #endif
 
 //Ultraschallsensor PINS
-const int TRIG_PIN_defined = 7;
-const int ECHO_PIN_defined = 8;
+const int TRIG_PIN_defined = 45;//7
+const int ECHO_PIN_defined = 46;//8
 
 //Drehgeber Pins
-const int CLK_Drehgeber = 2;//2
-const int DT_Drehgeber = 3; //3
+const int CLK_Drehgeber = 38;//2
+const int DT_Drehgeber = 39; //3
 
-// L298N Motor Pin definition
-//const unsigned int IN2 = 13;
-const unsigned int EN = 11;
-//const unsigned int IN1 =12;
 
 //Pins allgemein 
-const int ledRedPin = 9;
-const int ledGreenPin = 24; //PIN for Relais Motor
+const int ledRedPin = 25;//9
+const int Labelengine_RelaisTrigger = 24; //PIN for Relais Motor  //4
 
 const int ButtonGrenn = 22;
 const int InfrarotsensorPin = 44;
+
+
 
 
 //Variables
 long newPosition = 0;
 long old_Position = 0;
 long Label1Counts = -1950;
+
+
 
 #endif

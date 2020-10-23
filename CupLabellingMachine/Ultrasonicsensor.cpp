@@ -1,7 +1,3 @@
-// 
-// 
-// 
-
 #include "Ultrasonicsensor.h"
 
 void UltrasonicsensorClass::init(const int TRIG_PIN_, const  int ECHO_PIN_)
@@ -39,7 +35,7 @@ void UltrasonicsensorClass::measure()
 	// are found in the datasheet, and calculated from the assumed speed
 	//of sound in air at sea level (~340 m/s).
 	cm = pulse_width / 58.0;
-	delay(60);
+	//delay(60);
 }
 
 UltrasonicsensorClass Ultrasonicsensor;

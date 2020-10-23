@@ -24,7 +24,7 @@ public:
 	//Varibles
 	unsigned long t2 = NULL;
 	unsigned long pulse_width = NULL;
-	float cm = NULL;
+	float cm = 1000;
 
 	void measure();
 };
