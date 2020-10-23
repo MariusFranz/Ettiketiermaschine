@@ -5,14 +5,14 @@
 */
 
 // the setup function runs once when you press reset or power the board
-#include <L298N.h>
-#include <Encoder.h>
+//#include <L298N.h>
+//#include <Encoder.h>
 #include "Ultrasonicsensor.h"
 #include "PINS.h"
 #include "TuchDisplay.h"
 
 
-Encoder Drehgeber_Class(CLK_Drehgeber, DT_Drehgeber);
+//Encoder Drehgeber_Class(CLK_Drehgeber, DT_Drehgeber);
 //L298N Labelmotor(EN, IN1, IN2);
 
 int buttonState = LOW;         // variable for reading the pushbutton status
@@ -53,11 +53,11 @@ void loop() {
 		//digitalWrite(ledGreenPin, LOW);
 		//digitalWrite(ledRedPin, LOW);
 		Serial.println("Etikett da");
-		delay(570);//Delay für Glasnachlauf!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		delay(TuchDisplay.nachlauf_ultrasonicsensor);//Delay für Glasnachlauf!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
    
 		digitalWrite(Labelengine_RelaisTrigger, LOW);//Motor an
     
-		old_Position = Drehgeber_Class.readAndReset();
+//		old_Position = Drehgeber_Class.readAndReset();
 		//Serial.print("Drehgeber start value: ");
 		//Serial.print(old_Position);
 		//start MOtor
