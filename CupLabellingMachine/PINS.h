@@ -19,6 +19,9 @@ const int DT_Drehgeber = 39; //3
 //Pins allgemein 
 const int ledRedPin = 25;//9
 const int Labelengine_RelaisTrigger = 24; //PIN for Relais Motor  //4
+const int Pneumaticcylinder_1 = 26; //PIN for Relais Cylinder1
+const int Pneumaticcylinder_2 = 27; //PIN for Relais Cylinder1
+
 
 const int ButtonGrenn = 22;
 const int InfrarotsensorPin = 44;

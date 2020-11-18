@@ -1,7 +1,3 @@
-//
-//
-//
-
 #include "TuchDisplay.h"
 
 void TuchDisplayClass::init()
@@ -12,13 +8,6 @@ void TuchDisplayClass::init()
 	tft.setRotation(2);
 	tft.fillScreen(BLACK);
 	tft.setCursor(0, 0);
-  /**
-	tft.setTextColor(GREEN);
-	tft.setTextSize(2);
-	tft.println("Etikett aufziehen");
-	tft.drawRect(BOXSIZE*2, BOXSIZE, BOXSIZE, BOXSIZE, WHITE);
-	tft.fillRect(BOXSIZE*2, BOXSIZE, BOXSIZE, BOXSIZE, RED);
-  **/
 
   /**new**/
   tft.setCursor(0, 20);
@@ -109,20 +98,7 @@ void TuchDisplayClass::runTouch()
 		Serial.print("("); Serial.print(p.x);
 		Serial.print(", "); Serial.print(p.y);
 		Serial.println(")");
-		/**
-		if (p.y < BOXSIZE*2 && p.y > BOXSIZE ) {
-			oldcolor = currentcolor;
-			
-
-			if (p.x < BOXSIZE*3 && p.x > BOXSIZE*2 ) {
-				etikett_aufziehen = true;
-				currentcolor = GREEN;
-				tft.drawRect(BOXSIZE*2, BOXSIZE, BOXSIZE, BOXSIZE, WHITE);
-				tft.fillRect(BOXSIZE*2, BOXSIZE, BOXSIZE, BOXSIZE, GREEN);			
-			} 
-
-		}
-		**/
+    
 		// Box Minus  Infrarotsensor abfragen Position: BOXSIZE*4, BOXSIZE*5
 		if (p.x < BOXSIZE*5 && p.x > BOXSIZE*4 && p.y < BOXSIZE*6 && p.y > BOXSIZE*5 ) {
 			
@@ -185,12 +161,6 @@ void TuchDisplayClass::runTouch()
     
 
 	}
- /**
-	else if (p.z < MINPRESSURE) {
-		tft.fillRect(BOXSIZE*2, BOXSIZE, BOXSIZE, BOXSIZE, RED);
-		etikett_aufziehen = false;
-	}
- **/
 }
 
 TuchDisplayClass TuchDisplay;
