@@ -24,7 +24,8 @@ const int Pneumaticcylinder_2 = 27; //PIN for Relais Cylinder1
 
 
 const int ButtonGrenn = 22;
-const int InfrarotsensorPin = 44;
+const int InfrarotsensorPin = 21;  //44; geänder Achtung !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+const int LaserschrankePin = 20;
 
 
 
